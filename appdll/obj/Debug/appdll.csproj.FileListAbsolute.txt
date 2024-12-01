@@ -1,0 +1,12 @@
+C:\Users\Amin\Desktop\systemmanagment\appdll\bin\Debug\appdll.dll.config
+C:\Users\Amin\Desktop\systemmanagment\appdll\bin\Debug\appdll.dll
+C:\Users\Amin\Desktop\systemmanagment\appdll\bin\Debug\appdll.pdb
+C:\Users\Amin\Desktop\systemmanagment\appdll\bin\Debug\EntityFramework.dll
+C:\Users\Amin\Desktop\systemmanagment\appdll\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Amin\Desktop\systemmanagment\appdll\bin\Debug\EntityFramework.xml
+C:\Users\Amin\Desktop\systemmanagment\appdll\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Amin\Desktop\systemmanagment\appdll\obj\Debug\appdll.csproj.AssemblyReference.cache
+C:\Users\Amin\Desktop\systemmanagment\appdll\obj\Debug\appdll.csproj.CoreCompileInputs.cache
+C:\Users\Amin\Desktop\systemmanagment\appdll\obj\Debug\appdll.csproj.CopyComplete
+C:\Users\Amin\Desktop\systemmanagment\appdll\obj\Debug\appdll.dll
+C:\Users\Amin\Desktop\systemmanagment\appdll\obj\Debug\appdll.pdb
