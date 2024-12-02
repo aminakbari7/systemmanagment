@@ -14,6 +14,7 @@ namespace systemmanagment
     {
 
        dbappEntities db=new dbappEntities();
+        public int x = 0;
         public FormPersons()
         {
             InitializeComponent();
@@ -102,9 +103,9 @@ namespace systemmanagment
             db.Dispose();
             db=new dbappEntities();
             refreshgrid();
-            
-
-
+            dataGridViewpersons.Rows[x].Selected = true;
+            x = 0;
+            dataGridViewpersons.Rows[x].Selected = false;
         }
         public void cleartextboxpersons()
         {
@@ -122,11 +123,24 @@ namespace systemmanagment
             textBoxcodm.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[3].Value);
             textBoxphone.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[4].Value);
             textBoxaddress.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[5].Value);
+            x = dataGridViewpersons.CurrentCell.RowIndex;
         }
 
         private void BtnUserCancel_Click(object sender, EventArgs e)
         {
             refreshgrid();
+        }
+
+        private void BtnPrsonsPrint_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dataGridViewpersons.Width, this.dataGridViewpersons.Height);
+            this.dataGridViewpersons.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridViewpersons.Width, this.dataGridViewpersons.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
         }
     }
 }
