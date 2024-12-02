@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="appdata.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>appdata.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="appdata.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="appdata.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>appdata.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="find_person_Result.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormPersons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +87,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_Persons.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_Roles.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_Users.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwpersons.cs">
+      <DependentUpon>appdata.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormPersons.resx">
       <DependentUpon>FormPersons.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +124,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="appdata.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>appdata.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="appdata.edmx.diagram">
+      <DependentUpon>appdata.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -165,14 +221,20 @@
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\appbll\appbll.csproj">
-      <Project>{8c5bc186-5424-4cbe-9e79-3bcc0849bc42}</Project>
-      <Name>appbll</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\appdll\appdll.csproj">
-      <Project>{36fdee4a-48ce-4ff8-843c-ca4a3cf53d12}</Project>
-      <Name>appdll</Name>
-    </ProjectReference>
+    <Content Include="appdata.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>appdata.Context.cs</LastGenOutput>
+      <DependentUpon>appdata.edmx</DependentUpon>
+    </Content>
+    <Content Include="appdata.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>appdata.edmx</DependentUpon>
+      <LastGenOutput>appdata.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
