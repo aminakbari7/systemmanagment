@@ -142,5 +142,18 @@ namespace systemmanagment
             this.dataGridViewpersons.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridViewpersons.Width, this.dataGridViewpersons.Height));
             e.Graphics.DrawImage(bm, 0, 0);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int ide = Convert.ToInt32(dataGridViewpersons.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("آیا مطمئن هستید؟?", "system message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                var s = db.delete_person(ide);
+                db.SaveChanges();
+                MessageBox.Show("با موفقیت حذف شد", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshgrid();
+            }
+        }
     }
 }
