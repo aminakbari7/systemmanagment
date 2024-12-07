@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace systemmanagment
 {
     public partial class FormPersons : Form
     {
 
-       dbappEntities db=new dbappEntities();
+        dbappEntities1 db = new dbappEntities1();
         public int x = 0;
         public FormPersons()
         {
@@ -101,7 +100,7 @@ namespace systemmanagment
             db.update_person(Convert.ToInt32(textBoxid.Text), textBoxname.Text, textBoxfamily.Text, textBoxphone.Text, textBoxcodm.Text, textBoxaddress.Text);
             db.SaveChanges();
             db.Dispose();
-            db=new dbappEntities();
+            db=new dbappEntities1();
             refreshgrid();
             dataGridViewpersons.Rows[x].Selected = true;
             x = 0;
@@ -133,15 +132,42 @@ namespace systemmanagment
 
         private void BtnPrsonsPrint_Click(object sender, EventArgs e)
         {
-            printDocument1.Print();
+        copyAlltoClipboard();
+        
+        Microsoft.Office.Interop.Excel.Application xlexcel;
+        Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+        Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+        object misValue = System.Reflection.Missing.Value;
+        xlexcel = new Microsoft.Office.Interop.Excel.Application();
+        xlexcel.Visible = true;
+        xlWorkBook = xlexcel.Workbooks.Add(misValue);
+        xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
+        CR.Select();
+        xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true); 
+            
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        //
+        private void copyAlltoClipboard()
         {
-            Bitmap bm = new Bitmap(this.dataGridViewpersons.Width, this.dataGridViewpersons.Height);
-            this.dataGridViewpersons.DrawToBitmap(bm, new Rectangle(0, 0, this.dataGridViewpersons.Width, this.dataGridViewpersons.Height));
-            e.Graphics.DrawImage(bm, 0, 0);
+            dataGridViewpersons.SelectAll();
+            DataObject dataObj = dataGridViewpersons.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
         }
+
+
+
+
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -154,6 +180,16 @@ namespace systemmanagment
                 MessageBox.Show("با موفقیت حذف شد", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refreshgrid();
             }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+           
+        }
+
+        private void dataGridViewpersons_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
