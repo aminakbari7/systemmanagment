@@ -26,7 +26,8 @@ namespace systemmanagment
           
             BtnUserSave.Enabled = false;
             BtnUserAdd.Enabled = true;
-            textBoxid.Visible = false; 
+            textBoxid.Visible = false;
+            labelid.Visible = false;
             var q = db.vwpersons;
             dataGridViewpersons.DataSource = q.ToList();
             textBoxname.Text = "";
@@ -116,12 +117,13 @@ namespace systemmanagment
             BtnUserSave.Enabled = true;
             BtnUserAdd.Enabled = false;
             textBoxid.Visible = true;
-            textBoxid.Text= Convert.ToString(dataGridViewpersons.CurrentRow.Cells[0].Value);
-            textBoxname.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[1].Value);
-            textBoxfamily.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[2].Value);
-            textBoxcodm.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[3].Value);
-            textBoxphone.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[4].Value);
-            textBoxaddress.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[5].Value);
+            labelid.Visible = true;
+            textBoxid.Text= Convert.ToString(dataGridViewpersons.CurrentRow.Cells[0].Value).TrimEnd();
+            textBoxname.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[1].Value).TrimEnd();
+            textBoxfamily.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[2].Value).TrimEnd();
+            textBoxcodm.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[3].Value).TrimEnd();
+            textBoxphone.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[4].Value).TrimEnd();
+            textBoxaddress.Text = Convert.ToString(dataGridViewpersons.CurrentRow.Cells[5].Value).TrimEnd();
             x = dataGridViewpersons.CurrentCell.RowIndex;
         }
 
