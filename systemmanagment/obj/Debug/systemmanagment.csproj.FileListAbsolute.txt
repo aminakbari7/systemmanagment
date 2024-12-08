@@ -15,3 +15,4 @@ C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\EntityFramework.
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\EntityFramework.xml
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.csproj.CopyComplete
+C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.FormLogin.resources
