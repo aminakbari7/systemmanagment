@@ -66,7 +66,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="dbappEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="dbappEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TB_Persons" EntityType="Self.TB_Persons" />
     <EntitySet Name="TB_Roles" EntityType="Self.TB_Roles" />
@@ -88,6 +88,11 @@
     </FunctionImport>
     <FunctionImport Name="find_person" ReturnType="Collection(dbappModel.find_person_Result)">
       <Parameter Name="search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="isadmin" ReturnType="Collection(dbappModel.isadmin_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="rolename" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -135,6 +140,15 @@
     <Property Type="String" Name="phone" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="codm" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="address" Nullable="true" MaxLength="40" />
+  </ComplexType>
+  <ComplexType Name="isadmin_Result">
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="RoleId_Fk" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Family" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="LastLogin" Nullable="true" MaxLength="30" />
   </ComplexType>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
