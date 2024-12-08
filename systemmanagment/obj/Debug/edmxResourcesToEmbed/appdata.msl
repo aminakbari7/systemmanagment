@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="dbappModelStoreContainer" CdmEntityContainer="dbappEntities">
+  <EntityContainerMapping StorageEntityContainer="dbappModelStoreContainer" CdmEntityContainer="dbappEntities1">
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="dbappModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -68,6 +68,19 @@
           <ScalarProperty Name="phone" ColumnName="phone" />
           <ScalarProperty Name="codm" ColumnName="codm" />
           <ScalarProperty Name="address" ColumnName="address" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="isadmin" FunctionName="dbappModel.Store.isadmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbappModel.isadmin_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId_Fk" ColumnName="RoleId_Fk" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
