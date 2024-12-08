@@ -41,6 +41,11 @@
     <Property Name="LastLogin" Type="nvarchar" MaxLength="30" />
   </EntityType>
   <!--Errors Found During Generation:
+warning 6013: The table/view 'dbapp.dbo.vw_rolls' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vw_rolls">
+          <Property Name="RoleName" Type="nvarchar" MaxLength="30" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
 warning 6002: The table/view 'dbapp.dbo.vwpersons' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="vwpersons">
     <Key>
@@ -80,6 +85,11 @@ warning 6002: The table/view 'dbapp.dbo.vwpersons' does not have a primary key d
     <Parameter Name="search" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="isadmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="rolename" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />
