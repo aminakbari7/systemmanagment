@@ -174,12 +174,12 @@ namespace systemmanagment
         private void button1_Click(object sender, EventArgs e)
         {
             int ide = Convert.ToInt32(dataGridViewpersons.CurrentRow.Cells[0].Value);
-            DialogResult result = MessageBox.Show("آیا مطمئن هستید؟?", "system message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Are you sure?", "system message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 var s = db.delete_person(ide);
                 db.SaveChanges();
-                MessageBox.Show("با موفقیت حذف شد", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Item Deleted!", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refreshgrid();
             }
         }
