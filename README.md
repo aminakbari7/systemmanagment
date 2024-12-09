@@ -1,3 +1,3 @@
 # systemmanagment
  windows app
-<img width="960" alt="app" src="https://github.com/user-attachments/assets/74c8ec39-6f48-47fe-9323-f35a5b02a7a9">
+![Untitled](https://github.com/user-attachments/assets/296a7ee0-9054-4d1e-99d5-0ca8b40e46d3)
