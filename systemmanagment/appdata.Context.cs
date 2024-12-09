@@ -15,10 +15,10 @@ namespace systemmanagment
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class dbappEntities : DbContext
+    public partial class dbappEntities1 : DbContext
     {
-        public dbappEntities()
-            : base("name=dbappEntities")
+        public dbappEntities1()
+            : base("name=dbappEntities1")
         {
         }
     
@@ -74,6 +74,23 @@ namespace systemmanagment
                 new ObjectParameter("search", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<find_person_Result>("find_person", searchParameter);
+        }
+    
+        public virtual ObjectResult<isadmin_Result> isadmin(string username, string password, string rolename)
+        {
+            var usernameParameter = username != null ?
+                new ObjectParameter("username", username) :
+                new ObjectParameter("username", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("password", password) :
+                new ObjectParameter("password", typeof(string));
+    
+            var rolenameParameter = rolename != null ?
+                new ObjectParameter("rolename", rolename) :
+                new ObjectParameter("rolename", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<isadmin_Result>("isadmin", usernameParameter, passwordParameter, rolenameParameter);
         }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
