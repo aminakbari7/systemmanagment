@@ -53,19 +53,25 @@ namespace systemmanagment
 
         private void BtnLog_Click_1(object sender, EventArgs e)
         {
-            var r = db.isadmin(textBoxusername.Text, textBoxpassword.Text, comboBoxroll.SelectedValue.ToString()).ToList();
-
-            //var r = from a in db.TB_Users.ToList()
-            //where a.Name == textBoxusername.Text && a.Password == textBoxpassword.Text
-            // select new { a.Name, a.Family };
-            if (r.Count() > 0)
+            if (textBoxusername.Text.Length > 0 && textBoxpassword.Text.Length > 4)
             {
-                Form_Main form2 = new Form_Main();
-                db.Dispose();
-                this.Hide();
-                form2.Closed += (s, args) => this.Close();
-                form2.Show();
+                var r = db.isadmin(textBoxusername.Text, textBoxpassword.Text, comboBoxroll.SelectedValue.ToString()).ToList();
+                //var r = from a in db.TB_Users.ToList()
+                //where a.Name == textBoxusername.Text && a.Password == textBoxpassword.Text
+                // select new { a.Name, a.Family };
+                if (r.Count() > 0)
+                {
+                    user u=new user();
+                    Form_Main form2 = new Form_Main();
+                    db.Dispose();
+                    this.Hide();
+                    form2.Closed += (s, args) => this.Close();
+                    form2.Show();
+                }
             }
+            else
+                MessageBox.Show("please fill inputs!!", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
