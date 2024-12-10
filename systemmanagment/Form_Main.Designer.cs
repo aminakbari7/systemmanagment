@@ -45,6 +45,7 @@
             this.paneldown = new System.Windows.Forms.Panel();
             this.panelright = new System.Windows.Forms.Panel();
             this.panelmain = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.PnlLeft.SuspendLayout();
             this.panelreports.SuspendLayout();
             this.panelsetting.SuspendLayout();
@@ -53,6 +54,7 @@
             this.PanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelup.SuspendLayout();
+            this.panelmain.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlLeft
@@ -255,11 +257,21 @@
             // panelmain
             // 
             this.panelmain.BackColor = System.Drawing.Color.White;
+            this.panelmain.Controls.Add(this.label1);
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.Location = new System.Drawing.Point(230, 47);
             this.panelmain.Name = "panelmain";
             this.panelmain.Size = new System.Drawing.Size(842, 671);
             this.panelmain.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(192, 121);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // Form_Main
             // 
@@ -285,6 +297,8 @@
             this.PanelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelup.ResumeLayout(false);
+            this.panelmain.ResumeLayout(false);
+            this.panelmain.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -308,5 +322,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelright;
         private System.Windows.Forms.Panel panelmain;
+        private System.Windows.Forms.Label label1;
     }
 }
