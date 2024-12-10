@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.paneltextboxlogo = new System.Windows.Forms.Panel();
-            this.panellogologin = new System.Windows.Forms.Panel();
+            this.panellogofoter = new System.Windows.Forms.Panel();
             this.BtnLog = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,8 +40,8 @@
             this.comboBoxroll = new System.Windows.Forms.ComboBox();
             this.textBoxpassword = new System.Windows.Forms.TextBox();
             this.textBoxusername = new System.Windows.Forms.TextBox();
+            this.panellogologin = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panellogofoter = new System.Windows.Forms.Panel();
             this.panelup.SuspendLayout();
             this.paneltextboxlogo.SuspendLayout();
             this.panellogologin.SuspendLayout();
@@ -103,15 +103,14 @@
             this.paneltextboxlogo.Size = new System.Drawing.Size(638, 436);
             this.paneltextboxlogo.TabIndex = 8;
             // 
-            // panellogologin
+            // panellogofoter
             // 
-            this.panellogologin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(11)))), ((int)(((byte)(76)))));
-            this.panellogologin.Controls.Add(this.pictureBox1);
-            this.panellogologin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panellogologin.Location = new System.Drawing.Point(0, 47);
-            this.panellogologin.Name = "panellogologin";
-            this.panellogologin.Size = new System.Drawing.Size(245, 436);
-            this.panellogologin.TabIndex = 9;
+            this.panellogofoter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(11)))), ((int)(((byte)(76)))));
+            this.panellogofoter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panellogofoter.Location = new System.Drawing.Point(0, 412);
+            this.panellogofoter.Name = "panellogofoter";
+            this.panellogofoter.Size = new System.Drawing.Size(638, 24);
+            this.panellogofoter.TabIndex = 14;
             // 
             // BtnLog
             // 
@@ -162,6 +161,7 @@
             this.comboBoxroll.Name = "comboBoxroll";
             this.comboBoxroll.Size = new System.Drawing.Size(232, 28);
             this.comboBoxroll.TabIndex = 9;
+            this.comboBoxroll.SelectedIndexChanged += new System.EventHandler(this.comboBoxroll_SelectedIndexChanged);
             // 
             // textBoxpassword
             // 
@@ -177,6 +177,16 @@
             this.textBoxusername.Size = new System.Drawing.Size(232, 26);
             this.textBoxusername.TabIndex = 7;
             // 
+            // panellogologin
+            // 
+            this.panellogologin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(11)))), ((int)(((byte)(76)))));
+            this.panellogologin.Controls.Add(this.pictureBox1);
+            this.panellogologin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panellogologin.Location = new System.Drawing.Point(0, 47);
+            this.panellogologin.Name = "panellogologin";
+            this.panellogologin.Size = new System.Drawing.Size(245, 436);
+            this.panellogologin.TabIndex = 9;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::systemmanagment.Properties.Resources.logo;
@@ -186,15 +196,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panellogofoter
-            // 
-            this.panellogofoter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(11)))), ((int)(((byte)(76)))));
-            this.panellogofoter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panellogofoter.Location = new System.Drawing.Point(0, 412);
-            this.panellogofoter.Name = "panellogofoter";
-            this.panellogofoter.Size = new System.Drawing.Size(638, 24);
-            this.panellogofoter.TabIndex = 14;
             // 
             // FormLogin
             // 
