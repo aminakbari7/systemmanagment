@@ -16,3 +16,7 @@ C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\EntityFramework.
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.csproj.CopyComplete
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.FormLogin.resources
+C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\systemmanagment.exe.manifest
+C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\systemmanagment.application
+C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.exe.manifest
+C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.application
