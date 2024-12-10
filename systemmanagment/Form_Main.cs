@@ -12,10 +12,12 @@ namespace systemmanagment
 {
     public partial class Form_Main : Form
     {
-     
-        public Form_Main( )
+
+       
+        public Form_Main()
         {
             InitializeComponent();
+            label1.Text = ClassUser.UserName+"   " +ClassUser.Password +"  "+ClassUser.RoleName;
         
         }
 
@@ -54,6 +56,7 @@ namespace systemmanagment
             this.BtnPersons.BackColor = Color.FromArgb(136, 6, 56);
             this.BtnReports.BackColor = Color.FromArgb(136, 6, 56);
             this.BtnSetting.BackColor = Color.FromArgb(136, 6, 56);
+            this.BtnMyaccount.BackColor = Color.FromArgb(136, 6, 56);
         }
 
         private void BtnPersons_Click(object sender, EventArgs e)
@@ -82,6 +85,21 @@ namespace systemmanagment
         {
             Reset_btn_color();
             this.BtnReports.BackColor = Color.FromArgb(19, 164, 150);
+        }
+
+        private void BtnMyaccount_Click(object sender, EventArgs e)
+        {
+            Reset_btn_color();
+            this.BtnMyaccount.BackColor = Color.FromArgb(19, 164, 150);
+            this.panelmain.Controls.Clear();
+            Form fm = new FormMyaccount();
+            AddOwnedForm(fm);
+            fm.TopLevel = false;
+            fm.Dock = DockStyle.Fill;
+            this.panelmain.Tag = fm;
+            this.panelmain.Controls.Add(fm);
+            fm.BringToFront();
+            fm.Show();
         }
     }
 }

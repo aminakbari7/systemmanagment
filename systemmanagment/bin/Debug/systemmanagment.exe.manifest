@@ -66,42 +66,42 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="systemmanagment.exe" size="91544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="systemmanagment.exe" size="107416">
       <assemblyIdentity name="systemmanagment" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O2/TVBxd6BPSmo8vK9GiAlGfkFyJeexuV9HEM4s1SyY=</dsig:DigestValue>
+        <dsig:DigestValue>jJ1aCjk15x9+ymnUvekr17vkKi+wazZ9b9bhtwvDohk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="appdata.Context.tt" size="22931">
+  <file name="Appdb.Context.tt" size="22929">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>nnmsDyA4HMaIzJSq1ltjokn4vMajptGCLcvv+21q/NM=</dsig:DigestValue>
+      <dsig:DigestValue>iey04qQtJo9AaL+qCRRlyT0MK3wO2hw+34h5Zg9dKFk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="appdata.tt" size="25276">
+  <file name="Appdb.tt" size="25274">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6WtLgZDG0/hyD/VzwjxKbmorTi3VEoUFih5FUYQa0i8=</dsig:DigestValue>
+      <dsig:DigestValue>dMPXyy6u5UlCekFc34hbynO7LPG6bpfGZnegOfuVvBE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="systemmanagment.exe.config" size="917">
+  <file name="systemmanagment.exe.config" size="1257">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mtz23eNRxzo4JK+REZXkwlm6FQFbljZ2yEKXQPr6qC4=</dsig:DigestValue>
+      <dsig:DigestValue>E2+jajMnJv/scJwO8U4fx1IHRd6VNd2MWWyRF48WctI=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

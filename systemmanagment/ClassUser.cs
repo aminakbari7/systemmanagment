@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace systemmanagment
 {
-    internal class ClassUser
+     class ClassUser
     {
-        public int Id { get; set; }
-        public int Role_Id { get; set; }
-        public string UserName { get; set; }
 
-        public string Password { get; set; }
-        public string Name { get; set; }
+        public static string Id { get; set; }
+        public static string RoleName { get; set; }
+        public static string UserName { get; set; }
 
-        public string Family { get; set; }
-        public string LastLogin{ get; set; }
-        
+        public static string Password { get; set; }
+        public static string Name { get; set;}
+
+        public static string Family { get; set;}
+        public static string LastLogin { get; set; }
+
     }
 }

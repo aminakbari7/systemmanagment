@@ -20,3 +20,4 @@ C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\systemmanagment.
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\bin\Debug\systemmanagment.application
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.exe.manifest
 C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.application
+C:\Users\Amin\Desktop\systemmanagment\systemmanagment\obj\Debug\systemmanagment.FormMyaccount.resources

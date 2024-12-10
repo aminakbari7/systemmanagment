@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbappModelStoreContainer" CdmEntityContainer="dbappEntities2">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="dbappModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Persons">
+      <EntityTypeMapping TypeName="dbappModel.TB_Persons">
+        <MappingFragment StoreEntitySet="TB_Persons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="codm" ColumnName="codm" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Roles">
+      <EntityTypeMapping TypeName="dbappModel.TB_Roles">
+        <MappingFragment StoreEntitySet="TB_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_UserHistory">
+      <EntityTypeMapping TypeName="dbappModel.TB_UserHistory">
+        <MappingFragment StoreEntitySet="TB_UserHistory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Users">
+      <EntityTypeMapping TypeName="dbappModel.TB_Users">
+        <MappingFragment StoreEntitySet="TB_Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId_Fk" ColumnName="RoleId_Fk" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwpersons">
+      <EntityTypeMapping TypeName="dbappModel.vwpersons">
+        <MappingFragment StoreEntitySet="vwpersons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="codm" ColumnName="codm" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Add_MyHistory" FunctionName="dbappModel.Store.Add_MyHistory" />
+    <FunctionImportMapping FunctionImportName="add_person" FunctionName="dbappModel.Store.add_person" />
+    <FunctionImportMapping FunctionImportName="delete_person" FunctionName="dbappModel.Store.delete_person" />
+    <FunctionImportMapping FunctionImportName="find_person" FunctionName="dbappModel.Store.find_person">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbappModel.find_person_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="codm" ColumnName="codm" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="isadmin" FunctionName="dbappModel.Store.isadmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbappModel.isadmin_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId_Fk" ColumnName="RoleId_Fk" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="last_log" FunctionName="dbappModel.Store.last_log" />
+    <FunctionImportMapping FunctionImportName="MyHistory" FunctionName="dbappModel.Store.MyHistory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbappModel.MyHistory_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="dbappModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="dbappModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="dbappModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="dbappModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbappModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="dbappModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbappModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="dbappModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="dbappModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="update_person" FunctionName="dbappModel.Store.update_person" />
+    <FunctionImportMapping FunctionImportName="update_user" FunctionName="dbappModel.Store.update_user" />
+  </EntityContainerMapping>
+</Mapping>

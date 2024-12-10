@@ -87,30 +87,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="appdata.Context.cs">
+    <Compile Include="Appdb.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>appdata.Context.tt</DependentUpon>
+      <DependentUpon>Appdb.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="appdata.cs">
+    <Compile Include="Appdb.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="appdata.Designer.cs">
+    <Compile Include="Appdb.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>appdata.edmx</DependentUpon>
+      <DependentUpon>Appdb.edmx</DependentUpon>
     </Compile>
     <Compile Include="ClassUser.cs" />
     <Compile Include="find_person_Result.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMyaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMyaccount.Designer.cs">
+      <DependentUpon>FormMyaccount.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPersons.cs">
       <SubType>Form</SubType>
@@ -125,33 +131,42 @@
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="isadmin_Result.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyHistory_Result.cs">
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Persons.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Roles.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_UserHistory.cs">
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Users.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <Compile Include="vwpersons.cs">
-      <DependentUpon>appdata.tt</DependentUpon>
+      <DependentUpon>Appdb.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMyaccount.resx">
+      <DependentUpon>FormMyaccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPersons.resx">
       <DependentUpon>FormPersons.cs</DependentUpon>
@@ -169,12 +184,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="appdata.edmx">
+    <EntityDeploy Include="Appdb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>appdata.Designer.cs</LastGenOutput>
+      <LastGenOutput>Appdb.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="appdata.edmx.diagram">
-      <DependentUpon>appdata.edmx</DependentUpon>
+    <None Include="Appdb.edmx.diagram">
+      <DependentUpon>Appdb.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -273,18 +288,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="appdata.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>appdata.edmx</DependentUpon>
-      <LastGenOutput>appdata.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="appdata.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>appdata.edmx</DependentUpon>
-      <LastGenOutput>appdata.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -295,6 +298,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Appdb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Appdb.edmx</DependentUpon>
+      <LastGenOutput>Appdb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Appdb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Appdb.edmx</DependentUpon>
+      <LastGenOutput>Appdb.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,7 +12,7 @@ namespace systemmanagment
     public partial class FormPersons : Form
     {
 
-        dbappEntities1 db = new dbappEntities1();
+        dbappEntities2 db = new dbappEntities2();
         public int x = 0;
         public FormPersons()
         {
@@ -92,6 +92,7 @@ namespace systemmanagment
         {
             
             var a = db.add_person(textBoxname.Text, textBoxfamily.Text, textBoxphone.Text, textBoxcodm.Text, textBoxaddress.Text);
+            
             refreshgrid();
 
         }
@@ -101,7 +102,7 @@ namespace systemmanagment
             db.update_person(Convert.ToInt32(textBoxid.Text), textBoxname.Text, textBoxfamily.Text, textBoxphone.Text, textBoxcodm.Text, textBoxaddress.Text);
             db.SaveChanges();
             db.Dispose();
-            db=new dbappEntities1();
+            db=new dbappEntities2();
             refreshgrid();
             dataGridViewpersons.Rows[x].Selected = true;
             x = 0;

@@ -12,7 +12,7 @@ namespace systemmanagment
 {
     public partial class FormLogin : Form
     {
-        dbappEntities1 db = new dbappEntities1();
+        dbappEntities2 db = new dbappEntities2();
         
         public FormLogin()
         {
@@ -64,16 +64,19 @@ namespace systemmanagment
                 // select new { a.Name, a.Family };
                 if (r.Count() > 0)
                 {
-                   
+                    ClassUser.RoleName = comboBoxroll.SelectedValue.ToString();
+                    ClassUser.UserName = textBoxusername.Text;
+                    ClassUser.Password = textBoxpassword.Text;
                     Form_Main form2 = new Form_Main();
                     db.Dispose();
                     this.Hide();
                     form2.Closed += (s, args) => this.Close();
                     form2.Show();
+                    return;
                 }
             }
-            else
-                MessageBox.Show("please fill inputs!!", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            MessageBox.Show("invalid data!!", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

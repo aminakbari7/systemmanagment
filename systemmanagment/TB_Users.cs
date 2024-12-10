@@ -14,6 +14,12 @@ namespace systemmanagment
     
     public partial class TB_Users
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TB_Users()
+        {
+            this.TB_UserHistory = new HashSet<TB_UserHistory>();
+        }
+    
         public int UserId { get; set; }
         public Nullable<int> RoleId_Fk { get; set; }
         public string UserName { get; set; }
@@ -23,5 +29,7 @@ namespace systemmanagment
         public string LastLogin { get; set; }
     
         public virtual TB_Roles TB_Roles { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TB_UserHistory> TB_UserHistory { get; set; }
     }
 }
