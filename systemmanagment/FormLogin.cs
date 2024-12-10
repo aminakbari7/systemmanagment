@@ -34,7 +34,10 @@ namespace systemmanagment
                     //select new {a.Name,a.Family};
             if (r.Count()>0)
             {
+               
+                
                 Form_Main form2 = new Form_Main();
+
                 this.Hide();
                 form2.Closed += (s, args) => this.Close();
                 form2.Show();
@@ -61,7 +64,7 @@ namespace systemmanagment
                 // select new { a.Name, a.Family };
                 if (r.Count() > 0)
                 {
-                    user u=new user();
+                   
                     Form_Main form2 = new Form_Main();
                     db.Dispose();
                     this.Hide();
@@ -71,6 +74,11 @@ namespace systemmanagment
             }
             else
                 MessageBox.Show("please fill inputs!!", "system message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void comboBoxroll_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
