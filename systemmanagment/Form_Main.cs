@@ -12,9 +12,11 @@ namespace systemmanagment
 {
     public partial class Form_Main : Form
     {
-        public Form_Main()
+     
+        public Form_Main( )
         {
             InitializeComponent();
+        
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace systemmanagment
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
+           
 
         }
 
