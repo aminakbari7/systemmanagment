@@ -82,6 +82,7 @@ namespace systemmanagment
 
         private void comboBoxroll_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBoxroll.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
     }

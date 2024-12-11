@@ -101,5 +101,10 @@ namespace systemmanagment
             fm.BringToFront();
             fm.Show();
         }
+
+        private void panelreports_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
