@@ -64,9 +64,20 @@ namespace systemmanagment
             this.BtnPersonList.BackColor = Color.FromArgb(136, 6, 56);
             this.BtnSetting.BackColor = Color.FromArgb(136, 6, 56);
             this.BtnMyaccount.BackColor = Color.FromArgb(136, 6, 56);
-        }
 
-        private void BtnPersons_Click(object sender, EventArgs e)
+
+
+
+           
+            
+        }
+        private void Reset_subbtn_color()
+        {
+            this.BtnPersonList.BackColor = Color.FromArgb(136, 6, 56);
+            this.BtnPersonSalary.BackColor = Color.FromArgb(136, 6, 56);
+            this.BtnPersonsLeave.BackColor = Color.FromArgb(136, 6, 56);
+        }
+            private void BtnPersons_Click(object sender, EventArgs e)
         {
             Reset_btn_color();
             hide_Subpanel();
@@ -86,7 +97,9 @@ namespace systemmanagment
 
         private void BtnPersonList_Click(object sender, EventArgs e)
         {
-            
+
+            Reset_subbtn_color();
+            this.BtnPersonList.BackColor= Color.FromArgb(139, 216, 208);
             Form fm = new FormPersons();
             AddOwnedForm(fm);
             fm.TopLevel = false;
