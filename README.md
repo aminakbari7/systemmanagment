@@ -1,3 +1,4 @@
 # systemmanagment
  windows app
-![Untitled](https://github.com/user-attachments/assets/296a7ee0-9054-4d1e-99d5-0ca8b40e46d3)
+
+<img width="960" alt="Untitled" src="https://github.com/user-attachments/assets/d5a3209e-d9ef-4ac2-86e4-5093ed94b5ea" />
