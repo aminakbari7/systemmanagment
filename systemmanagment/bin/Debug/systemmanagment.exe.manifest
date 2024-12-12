@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="systemmanagment.exe" size="109976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="systemmanagment.exe" size="112536">
       <assemblyIdentity name="systemmanagment" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cFDmwqz7NMYZHI/j+1hpRVS5xxsVPE1ggnoflJhL3yI=</dsig:DigestValue>
+        <dsig:DigestValue>ORWC92e3bW+eRzyqY6JpdAA1Ryw2dFbD7IdGV75hs/4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

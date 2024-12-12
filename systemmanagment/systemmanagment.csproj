@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\Amin\Desktop\WebSite\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -124,12 +124,6 @@
     <Compile Include="FormPersons.Designer.cs">
       <DependentUpon>FormPersons.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formt.Designer.cs">
-      <DependentUpon>Formt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPersons.resx">
       <DependentUpon>FormPersons.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formt.resx">
-      <DependentUpon>Formt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
@@ -319,6 +310,9 @@
       <DependentUpon>Appdb.edmx</DependentUpon>
       <LastGenOutput>Appdb.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\list.png" />
+    <None Include="Resources\salary.png" />
+    <None Include="Resources\leave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

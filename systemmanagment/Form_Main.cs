@@ -17,6 +17,7 @@ namespace systemmanagment
         public Form_Main()
         {
             InitializeComponent();
+            hide_Subpanel();
             label1.Text = ClassUser.UserName+"   " +ClassUser.Password +"  "+ClassUser.RoleName;
         
         }
@@ -38,23 +39,29 @@ namespace systemmanagment
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
-           
+            hide_Subpanel();
 
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
             Reset_btn_color();
+            hide_Subpanel();
             this.BtnHome.BackColor = Color.FromArgb(19,164,150);
             this.panelmain.Controls.Clear();
            
 
         }
+        private void hide_Subpanel()
+        {
+            PanelMainSubPersons.Visible=false;
+            PanelMainSubSetting.Visible = false;
+        }
         private void Reset_btn_color()
         {
             this.BtnHome.BackColor = Color.FromArgb(136, 6, 56);
             this.BtnPersons.BackColor = Color.FromArgb(136, 6, 56);
-            this.BtnReports.BackColor = Color.FromArgb(136, 6, 56);
+            this.BtnPersonList.BackColor = Color.FromArgb(136, 6, 56);
             this.BtnSetting.BackColor = Color.FromArgb(136, 6, 56);
             this.BtnMyaccount.BackColor = Color.FromArgb(136, 6, 56);
         }
@@ -62,8 +69,24 @@ namespace systemmanagment
         private void BtnPersons_Click(object sender, EventArgs e)
         {
             Reset_btn_color();
+            hide_Subpanel();
             this.BtnPersons.BackColor = Color.FromArgb(19, 164, 150);
             this.panelmain.Controls.Clear();
+            PanelMainSubPersons.Visible = true;
+
+        }
+
+        private void BtnSetting_Click(object sender, EventArgs e)
+        {
+            Reset_btn_color();
+            this.BtnSetting.BackColor = Color.FromArgb(19, 164, 150);
+            hide_Subpanel();
+            PanelMainSubSetting.Visible = true;
+        }
+
+        private void BtnPersonList_Click(object sender, EventArgs e)
+        {
+            
             Form fm = new FormPersons();
             AddOwnedForm(fm);
             fm.TopLevel = false;
@@ -73,36 +96,29 @@ namespace systemmanagment
             fm.BringToFront();
             fm.Show();
 
-        }
 
-        private void BtnSetting_Click(object sender, EventArgs e)
-        {
-            Reset_btn_color();
-            this.BtnSetting.BackColor = Color.FromArgb(19, 164, 150);
-        }
-
-        private void BtnReports_Click(object sender, EventArgs e)
-        {
-            Reset_btn_color();
-            this.BtnReports.BackColor = Color.FromArgb(19, 164, 150);
         }
 
         private void BtnMyaccount_Click(object sender, EventArgs e)
         {
+            hide_Subpanel();
             Reset_btn_color();
             this.BtnMyaccount.BackColor = Color.FromArgb(19, 164, 150);
             this.panelmain.Controls.Clear();
-            Form fm = new FormMyaccount();
-            AddOwnedForm(fm);
-            fm.TopLevel = false;
-            fm.Dock = DockStyle.Fill;
-            this.panelmain.Tag = fm;
-            this.panelmain.Controls.Add(fm);
-            fm.BringToFront();
-            fm.Show();
+           
         }
 
         private void panelreports_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnPersonSalary_Click(object sender, EventArgs e)
         {
 
         }
